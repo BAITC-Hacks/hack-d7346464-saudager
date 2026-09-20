@@ -17,10 +17,8 @@
 
 | Участник | GitHub | Telegram |
 |---|---|---|
-| **Rustem Orazbay** | — | [@Rus_noname](https://t.me/Rus_noname) |
-| **Тилеев Жарасбек** | [@jtileyev](https://github.com/jtileyev) | — |
-
-> GitHub-аккаунт Rustem Orazbay стоит указать до начала соревновательной части: технические эксперты сверяют фактический вклад каждого участника по истории коммитов.
+| **Rustem Orazbay** | [@RustemProg](https://github.com/RustemProg) | [@Rus_noname](https://t.me/Rus_noname) |
+| **Тилеев Жарасбек** | [@jtileyev](https://github.com/jtileyev) | [@jtileyev](https://t.me/jtileyev) |
 
 ---
 
