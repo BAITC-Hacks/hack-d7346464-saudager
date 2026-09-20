@@ -1,0 +1,33 @@
+# секреты и локальные настройки
+.env
+.env.*
+!.env.example
+
+# зависимости и сборка
+node_modules/
+dist/
+build/
+.next/
+.vercel/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# локальные данные
+*.sqlite
+*.sqlite3
+*.db
+!seed/**
+
+# служебное
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+coverage/
+*.log
+
+# свод правил для AI-агентов — хранится вне репозитория
+AGENTS.md
+CLAUDE.md
