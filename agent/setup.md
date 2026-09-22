@@ -56,7 +56,35 @@
 | `supabase-agent-skills` | `supabase`, `postgres-best-practices` |
 | `n8n-mcp-skills` | `n8n-mcp-skills` |
 
-Ставится через `/plugin` в Claude Code: вкладка **Marketplaces** — добавить сторонние, затем вкладка **Plugins** — установить нужные. CLI-способ: `claude plugin marketplace add <имя>` и `claude plugin install <плагин>@<маркетплейс>`, если CLI установлен.
+**Имена маркетплейсов в интерфейсе не совпадают с путями репозиториев** — подставлять нужно вторые:
+
+| Имя в интерфейсе | Репозиторий для `marketplace add` |
+|---|---|
+| `claude-plugins-official` | `anthropics/claude-plugins-official` |
+| `supabase-agent-skills` | `supabase/agent-skills` |
+| `n8n-mcp-skills` | `czlonkowski/n8n-skills` |
+
+Через интерфейс: `/plugin` → вкладка **Marketplaces** добавить все три → вкладка **Plugins** установить нужные.
+
+Через CLI — весь набор одной командой:
+
+```bash
+claude plugin marketplace add anthropics/claude-plugins-official
+claude plugin marketplace add supabase/agent-skills
+claude plugin marketplace add czlonkowski/n8n-skills
+
+for p in superpowers context7 playwright frontend-design code-review security-guidance; do
+  claude plugin install "$p@claude-plugins-official"
+done
+claude plugin install supabase@supabase-agent-skills
+claude plugin install postgres-best-practices@supabase-agent-skills
+claude plugin install n8n-mcp-skills@n8n-mcp-skills
+```
+
+Если `claude` не в PATH, он лежит внутри расширения VSCode:
+`~/.vscode-server/extensions/anthropic.claude-code-*/resources/native-binary/claude`
+
+После установки нужен перезапуск сессии, чтобы плагины подхватились.
 
 **Два замечания по составу.**
 
